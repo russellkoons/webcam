@@ -10,7 +10,15 @@ function getVid() {
       console.log(mediaStream);
       video.srcObject = mediaStream;
       video.play();
-    });
+    })
+    .catch(err => console.error('OH NO!!!', err))
+}
+
+function paintToCanvas() {
+  const width = video.videoWidth;
+  const height = video.videoHeight;
+
+  
 }
 
 getVid();
